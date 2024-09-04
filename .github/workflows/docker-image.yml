@@ -23,10 +23,10 @@ jobs:
 
     - name: Save Docker image to a file
       run: |
-        docker save myapp:latest
+        docker save myapp:latest | gzip > myapp.tar.gz
 
     - name: Upload Docker image to repository root
       uses: actions/upload-artifact@v3
       with:
         name: docker-image
-        path: myapp
+        path: myapp.tar.gz
