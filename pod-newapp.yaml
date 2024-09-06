@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: newapp
-  namespace: newapp
-spec:
-  containers:
-  - name: newapp
-    image: ghcr.io/mrglutenfreeguy/kubecourse:latest
